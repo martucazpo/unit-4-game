@@ -5,8 +5,9 @@ var crys1 = [];
 var crys2 = [];
 var crys3 = [];
 var crys4 = [];
-wins = 0;
-losses = 0;
+var wins = 0;
+var losses = 0;
+
 
 $(document).ready(function () {
     $("#randNum").html(randNum);
@@ -52,17 +53,18 @@ function gameLoop() {
     };
 
     $(".btn").on("click", function playGame(item) {
-        if ((crysNum.reduce(getSum)) <= randNum) {
+        if ((crysNum.reduce(getSum)) < randNum) {
             $("#score").html("score" + crysNum.reduce(getSum));
         }
-        else if ((crysNum.reduce(getSum)) >= randNum) {
+        else if ((crysNum.reduce(getSum)) > randNum) {
             $("#score").html("you lost! you went too high! " + crysNum.reduce(getSum));
+            $("#losses").html(++losses);
+
         }
-        else if ((crysNum.reduce(getSum)) == randNum) {
+        else {
             $("#score").html("right on! you win! " + crysNum.reduce(getSum));
+            $("#wins").html(++wins);
         }
     });
-
-
-
 };
+
