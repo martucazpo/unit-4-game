@@ -47,12 +47,22 @@ function gameLoop() {
         console.log(crysNum);
     });
 
-    function getSum(total,num){
+    function getSum(total, num) {
         return total + num;
     };
 
-    $(".btn").on("click",function playGame(item){
-        $("#score").html("score" + crysNum.reduce(getSum));
+    $(".btn").on("click", function playGame(item) {
+        if ((crysNum.reduce(getSum)) <= randNum) {
+            $("#score").html("score" + crysNum.reduce(getSum));
+        }
+        else if ((crysNum.reduce(getSum)) >= randNum) {
+            $("#score").html("you lost! you went too high! " + crysNum.reduce(getSum));
+        }
+        else if ((crysNum.reduce(getSum)) == randNum) {
+            $("#score").html("right on! you win! " + crysNum.reduce(getSum));
+        }
     });
+
+
 
 };
