@@ -1,7 +1,6 @@
 var randNum = Math.floor(Math.random() * (150 - 50 + 1) + 50);
 var crysVal = [];
 var crysNum = [];
-var playGame = 0;
 var crys1 = [];
 var crys2 = [];
 var crys3 = [];
@@ -48,12 +47,12 @@ function gameLoop() {
         console.log(crysNum);
     });
 
+    function getSum(total,num){
+        return total + num;
+    };
 
-
-    $(".btn").on("click", function () {
-        for (var i = 0; i < crysNum.length; i++) {
-            playGame += (crysNum[i]);
-            $("#score").html("score " + playGame)
-        };
+    $(".btn").on("click",function playGame(item){
+        $("#score").html("score" + crysNum.reduce(getSum));
     });
+
 };
