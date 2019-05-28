@@ -2,7 +2,7 @@ function newGame(){
     $("#randNum").html();
     randNum = Math.floor(Math.random() * (150 - 50 + 1) + 50);
     crysVal = [];
-    crysNum = [];
+    crysNum = [0];
     crys1 = [];
     crys2 = [];
     crys3 = [];
@@ -70,17 +70,24 @@ function gameLoop() {
         if (crysNum.reduce(getSum) < randNum) {
             $("#score").html("score" + crysNum.reduce(getSum));
         }
-        else if (crysNum.reduce(getSum) > randNum) {
-            $("#score").html("you lost! you went too high! " + crysNum.reduce(getSum));
-            $("#losses").html(++losses);
-            newGame();
-        
+        else if (crysNum.reduce(getSum)> randNum) {
+            lose();
         }
         else {
-            $("#score").html("right on! you win! " + crysNum.reduce(getSum));
-            $("#wins").html(++wins); 
-            newGame();
+            win();     
         }
     });
 
+};
+
+function win() {
+    $("#score").html("right on! you win! " + crysNum.reduce(getSum));
+    $("#wins").html(++wins); 
+    newGame();       
+};
+
+function lose() {
+    $("#score").html("you lost! you went too high! " + crysNum.reduce(getSum));
+    $("#losses").html(++losses);
+    newGame(); 
 };
