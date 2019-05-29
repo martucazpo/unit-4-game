@@ -1,7 +1,9 @@
 body {
     background-image: url(../images/morocco.png)
 }
-.col-sm-2 {
+
+
+#crystal {
     position: relative;
 }
 

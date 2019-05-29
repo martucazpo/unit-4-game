@@ -17,32 +17,81 @@
 </head>
 
 <body>
-    <h1 id="randNum"></h1>
     <div class="container">
         <div class="row">
-            <div class="col-sm-2">
-                <img src="assets/images/noun_Crystal_120778.png" style="height:100px;width:100px;">
-                <button type="button" id="crys1" class="btn btn-outline-danger" style="border-color:transparent"></button>
-            </div>
-            <div class="col-sm-2">
-                <img src="assets/images/noun_Crystal_2476220.png" style="height:100px;width:100px;">
-                <button type="button" id="crys2" class="btn btn-outline-danger" style="border-color:transparent"></button>
-            </div>
-            <div class="col-sm-2">
-                <img src="assets/images/noun_Crystal_570598.png" style="height:100px;width:100px;">
-                <button type="button" id="crys3" class="btn btn-outline-danger" style="border-color:transparent"></button>
-            </div>
-            <div class="col-sm-2">
-                <img src="assets/images/noun_Crystal_713436.png" style="height:100px;width:100px;">
-                <button type="button" id="crys4" class="btn btn-outline-danger" style="border-color:transparent"></button>
+            <div class="col-md-3" style="background-color: tomato">
+                <header>Crystals Collector!</header>
             </div>
         </div>
     </div>
-    <h2 id="score"></h2>
-    <p id="wins"></p>
-    <p id="losses"></p>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5" style="background-color: salmon">
+                <p>You will be given a random number at the start of the game.</p>
+                <p>There are four crystals below. By clicking on a crystal you will be adding specific points to your
+                    total score.</p>
+                <p>You win the game by matching your total score to a random number. You lose the game if your score
+                    goes above that number.</p>
+                <p>The value of the crystal is hidden from you until you click on it.</p>
+                <p>Each time the game starts the game will change the value of each crystal.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3" style="background-color: seagreen">
+                <h1 id="randNum"></h1>
+            </div>
+            <div class="col-md-1" style="background-color: mediumaquamarine">
+                <p id="wins"></p>
+                <p id="losses"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-1" id="crystal" style="background-color: seashell">
+                <img src="assets/images/noun_Crystal_120778.png" style="height:60px;width:auto;">
+                <button type="button" id="crys1" class="btn btn-outline-danger"
+                    style="border-color:transparent"></button>
+            </div>
+            <div class="col-lg-1" id="crystal" style="background-color: seashell">
+                <img src="assets/images/noun_Crystal_2476220.png" style="height:60px;width:auto;">
+                <button type="button" id="crys2" class="btn btn-outline-danger"
+                    style="border-color:transparent"></button>
+            </div>
+            <div class="col-lg-1" id="crystal" style="background-color: seashell">
+                <img src="assets/images/noun_Crystal_570598.png" style="height:60px;width:auto;">
+                <button type="button" id="crys3" class="btn btn-outline-danger"
+                    style="border-color:transparent"></button>
+            </div>
+            <div class="col-lg-1" id="crystal" style="background-color: seashell">
+                <img src="assets/images/noun_Crystal_713436.png" style="height:60px;width:auto;">
+                <button type="button" id="crys4" class="btn btn-outline-danger"
+                    style="border-color:transparent"></button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3" style="background-color: royalblue">
+                <p>Your total score is:</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3" style="background-color: royalblue">
+                <h2 id="score"></h2>
+            </div>
+        </div>
+    </div>
+    </div>
 
 
-</body>
+
+
+
 
 </html>
