@@ -68,7 +68,7 @@ function gameLoop() {
 
     $(".btn").on("click", function playGame() {
         if (crysNum.reduce(getSum) < randNum) {
-            $("#score").html("score" + crysNum.reduce(getSum));
+            $("#score").html("number tally: " + crysNum.reduce(getSum));
         }
         else if (crysNum.reduce(getSum)> randNum) {
             lose();
