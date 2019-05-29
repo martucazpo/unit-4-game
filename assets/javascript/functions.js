@@ -68,7 +68,7 @@ function gameLoop() {
 
     $(".btn").on("click", function playGame() {
         if (crysNum.reduce(getSum) < randNum) {
-            $("#score").html("number tally: " + crysNum.reduce(getSum));
+            $("#score").html(crysNum.reduce(getSum));
         }
         else if (crysNum.reduce(getSum)> randNum) {
             lose();
@@ -82,12 +82,12 @@ function gameLoop() {
 
 function win() {
     $("#score").html("right on! you win! " + crysNum.reduce(getSum));
-    $("#wins").html(++wins); 
+    $("#wins").html("wins: " + wins++); 
     newGame();       
 };
 
 function lose() {
     $("#score").html("you lost! you went too high! " + crysNum.reduce(getSum));
-    $("#losses").html(++losses);
+    $("#losses").html("losses: " + losses++);
     newGame(); 
 };
