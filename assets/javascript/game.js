@@ -11,10 +11,3 @@ var losses = 0;
 
 $(document).ready(setUp);
 
-getSum();
-gameLoop();
-newGame();
-win();
-lose();
-setUp();
-
